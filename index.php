@@ -16,7 +16,15 @@ class Movie
     public $title;
     public $year;
     public $cast;
-    public $language = en;
+    public $language;
+
+    public function __construct($id, $title, $year, $cast, $language = en){
+        $this->id = $id;
+        $this->title = $title;
+        $this->year = $year;
+        $this->cast = $cast;
+        $this->language = $language;
+    }
 }
 
 ?>
