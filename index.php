@@ -7,4 +7,16 @@
 //    => all'interno della classe è definito almeno un metodo
 // - vengono istanziati almeno due oggetti ‘Movie’ e stampati a schermo i valori delle relative proprietà 
 
+
+// Creo la classe 'Movie'
+
+class Movie 
+{
+    public $id;
+    public $title;
+    public $year;
+    public $cast;
+    public $language = en;
+}
+
 ?>
