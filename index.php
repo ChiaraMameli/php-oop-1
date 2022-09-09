@@ -15,16 +15,31 @@ class Movie
     public $id;
     public $title;
     public $year;
-    public $cast;
+    public $director_firstname;
+    public $director_lastname;
     public $language;
 
-    public function __construct($id, $title, $year, $cast, $language = en){
+    public function __construct($id, $title, $year, $director_firstname, $director_lastname, $language = en){
         $this->id = $id;
         $this->title = $title;
         $this->year = $year;
-        $this->cast = $cast;
+        $this->director_firstname = $director_firstname;
+        $this->director_lastname = $director_lastname;
         $this->language = $language;
     }
+
+    public function getFullName()
+    {
+        return "$this->director_firstname $this->director_lastname";
+    }
 }
+
+$movie_1 = new Movie(1, 'E.T. the Extra-Terrestrial', '1982', 'Steven', 'Spielberg');
+$movie_2 = new Movie(2, 'Harry Potter and the Philosopher\'s Stone', '2001', 'Chris', 'Columbus');
+$movie_3 = new Movie(3, 'La mafia uccide solo d\'estate', '2013', 'Pierfrancesco', 'Diliberto', 'it');
+
+var_dump($movie_1);
+var_dump($movie_2);
+var_dump($movie_3);
 
 ?>
