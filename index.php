@@ -19,13 +19,27 @@ $movie_3 = new Movie(3, 'La mafia uccide solo d\'estate', '2013', 'Pierfrancesco
     <title>My Movies</title>
 </head>
 <body>
-    <h1 class="text-center">My Movies</h1>
+    <main class="container">
+        <h1 class="text-center">My Movies</h1>
 
-    <article>
-        <h3>titolo</h3>
-        <span>year</span>
-        <address>regista</address>
-    </article>
+        <article>
+            <h3><?= $movie_1->title ?></h3>
+            <span><?= $movie_1->year ?></span>
+            <address><?= $movie_1->getFullName() ?></address>
+        </article>
 
+        <article>
+            <h3><?= $movie_2->title ?></h3>
+            <span><?= $movie_2->year ?></span>
+            <address><?= $movie_2->getFullName() ?></address>
+        </article>
+
+        <article>
+            <h3><?= $movie_3->title ?></h3>
+            <span><?= $movie_3->year ?></span>
+            <address><?= $movie_3->getFullName() ?></address>
+        </article>
+
+    </main>
 </body>
 </html>
